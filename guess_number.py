@@ -1,16 +1,21 @@
 def guess_number(number):
-    choice = input("Enter q to quit guessing and to continue enter anyhing else: ")
-    if choice == 'q':
-        print(f"Sorry! The number was {number}.")
-    else:
+    total_guesses = 5
+    while total_guesses > 0:
+        print(f'You have {total_guesses} remaining')
         print("I'm thinking of a number...")
         guess = int(input("What number am I thinking of? "))
 
         if guess == number:
             print("Congratulations! You guessed the right number.")
+            return
         else:
             print("Wrong try again")
-            guess_number(number)
+        total_guesses = total_guesses - 1
+    
+        print(f'Out of guesses number is {number}')
+    
+
+    
 
 number = 10
 guess_number(number)
