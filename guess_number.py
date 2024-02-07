@@ -9,6 +9,10 @@ def guess_number(number):
             print("Congratulations! You guessed the right number.")
             return
         else:
+            if guess > number:
+                print('Guess was higher than number')
+            else:
+                print('Guess was lower than number')
             print("Wrong try again")
         total_guesses = total_guesses - 1
     
