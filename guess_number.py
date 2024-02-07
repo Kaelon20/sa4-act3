@@ -9,6 +9,10 @@ def guess_number(number):
         if guess == number:
             print("Congratulations! You guessed the right number.")
         else:
+            if guess > number:
+                print('Guess was higher than number')
+            else:
+                print('Guess was lower than number')
             print("Wrong try again")
             guess_number(number)
 
